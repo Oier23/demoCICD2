@@ -2,17 +2,15 @@ name: Primer workflow
 on: push
 
 jobs:
-  Download_code:
+  hola_mundo:
     runs-on: ubuntu-latest
-    steps:
-      - name: Download code
-        uses: actions/checkout@v4
 
-  Install_pytest:
-    runs-on: ubuntu-latest
     steps:
-      - name: Instalar pytest
+      - name: Bajar codigo
+        uses: actions/checkout@v4
+    
+      - name: Descargar pytest
         run: pip install pytest
 
-      - name: Ejecutar pruebas con pytest
+      - name: Ejecutar test
         run: pytest test.py
